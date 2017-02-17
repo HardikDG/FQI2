@@ -7,6 +7,10 @@ import { QuotesPage } from './../pages/quotes/quotes';
 import { QuotePage } from './../pages/quote/quote';
 import { LibraryPage } from './../pages/library/library';
 import { FavoritesPage } from './../pages/favorites/favorites';
+import { TabsPage } from './../pages/tabs/tabs';
+
+import { QuotesService } from './../services/quotes';
+import { SettingsService } from './../services/settings';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,8 @@ import { FavoritesPage } from './../pages/favorites/favorites';
     LibraryPage,
     QuotePage,
     QuotesPage,
-    SettingsPage
+    SettingsPage,
+    TabsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,8 +32,9 @@ import { FavoritesPage } from './../pages/favorites/favorites';
     LibraryPage,
     QuotePage,
     QuotesPage,
-    SettingsPage
+    SettingsPage,
+    TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},QuotesService,SettingsService]
 })
 export class AppModule {}

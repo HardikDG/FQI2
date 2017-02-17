@@ -1,9 +1,3 @@
-<!--
-  Generated template for the Library page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -14,5 +8,12 @@
 
 
 <ion-content padding>
-
+<h3 text-center> Please select your favorite quote </h3>
+<ion-list>
+  <button ion-item *ngFor="let quote of quoteCollection" [navPush]="quotesPage" [navParams]="quote">
+    <ion-icon [name]="quote.icon" item-left></ion-icon>
+    <h2>{{ quote.category | uppercase }}</h2>
+    <p> {{ quote.quotes.length }} </p>
+  </button>
+</ion-list>
 </ion-content>
