@@ -5,5 +5,5 @@ Ionic 2 sample from the Udemy Ionic course
 
 # Install and setup
 
-Clone the repo
-run npm install to install all the required dependency
+ - Clone the repo
+ - run `npm install` to install all the required dependency
